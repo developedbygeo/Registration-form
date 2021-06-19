@@ -1,0 +1,8 @@
+@mixin flex($justify, $align, $dir) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $dir;
+}
+$honeydew: #f1faee;
+$alice: #edf6f9;
