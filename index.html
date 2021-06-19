@@ -9,9 +9,23 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
       rel="stylesheet"
     />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icons/favicon-16x16.png"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -19,7 +33,55 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Registration Form | RegEx Validation</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <div class="logo">
+        <h1>New User Registration</h1>
+      </div>
+      <div class="square square1"></div>
+      <div class="square square2"></div>
+      <div class="square square3"></div>
+      <form action="">
+        <div class="wrapper">
+          <div class="username field">
+            <label for="username">Username</label>
+            <input type="text" id="username" />
+            <p>The username must contain 5-16 alphanumeric characters</p>
+          </div>
+          <div class="email field">
+            <label for="email">Email</label>
+            <input type="text" id="email" />
+            <p>Email must be a valid address, e.g. me@mydomain.com</p>
+          </div>
+          <div class="password field">
+            <label for="password">Password</label>
+            <input type="text" id="password" />
+            <p>
+              The password must contain 8-20 alphanumeric characters and/or
+              symbols.
+            </p>
+          </div>
+          <div class="contact-number field">
+            <label for="contact-number">Contact Number</label>
+            <input type="text" id="contact-number" />
+            <p>
+              The contact number must be a valid UK telephone number, consisting
+              of 11 digits.
+            </p>
+          </div>
+          <div class="profile-handle field">
+            <label for="handle">Handle</label>
+            <input type="text" id="handle" />
+            <p>
+              The handle must contain 5-20 lowercase alphanumeric characters
+            </p>
+          </div>
+        </div>
+        <button class="submit">Register</button>
+      </form>
+    </main>
+  </body>
 </html>
