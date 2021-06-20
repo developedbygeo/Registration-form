@@ -45,17 +45,17 @@
         <div class="wrapper">
           <div class="username field">
             <label for="username">Username</label>
-            <input type="text" id="username" />
+            <input type="text" id="username" name='username' />
             <p>The username must contain 5-16 alphanumeric characters</p>
           </div>
           <div class="email field">
             <label for="email">Email</label>
-            <input type="text" id="email" />
+            <input type="text" id="email" name='email' />
             <p>Email must be a valid address, e.g. me@mydomain.com</p>
           </div>
           <div class="password field">
             <label for="password">Password</label>
-            <input type="text" id="password" />
+            <input type="text" id="password" name='password' />
             <p>
               The password must contain 8-20 alphanumeric characters and/or
               symbols.
@@ -63,7 +63,7 @@
           </div>
           <div class="contact-number field">
             <label for="contact-number">Contact Number</label>
-            <input type="text" id="contact-number" />
+            <input type="text" name='contact' id="contact-number"/>
             <p>
               The contact number must be a valid UK telephone number, consisting
               of 11 digits.
@@ -71,16 +71,16 @@
           </div>
           <div class="profile-handle field">
             <label for="handle">Handle</label>
-            <input type="text" id="handle" />
+            <input type="text" id="handle" name='handle' />
             <p>
               The handle must contain 5-20 lowercase alphanumeric characters
             </p>
           </div>
         </div>
           <button class="submit">Register</button>
-          <a href="./redirect/">Link</a>
         </div>
       </form>
     </main>
+    <script defer src="./app.js"></script>
   </body>
 </html>
