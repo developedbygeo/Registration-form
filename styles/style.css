@@ -133,6 +133,16 @@ form p {
   flex-direction: column;
 }
 
+.invalid {
+  border: 1px solid #d93030;
+}
+
+.invalid-p {
+  color: #d93030;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
 .logo-redir {
   display: flex;
   justify-content: center;
@@ -141,13 +151,36 @@ form p {
   margin-bottom: 5rem;
 }
 
+.logo-redir h1,
+.logo-redir p {
+  margin-top: 2rem;
+}
+
 .main-image {
   height: 80vh;
   text-align: center;
+  width: 100vw;
 }
 
 .main-image svg {
   height: 80vh;
+  width: 100vw;
+  background: transparent;
+}
+
+.main-image g {
+  height: 80vh;
+  width: 100vw;
+}
+
+.outro {
+  text-align: center;
+  color: #f1faee;
+}
+
+.outro a {
+  text-decoration: underline;
+  color: #f1faee;
 }
 
 #flowers {
@@ -155,7 +188,7 @@ form p {
 }
 
 #grass {
-  animation: grass 3s ease-in infinite alternate 0.5s;
+  animation: grass 3s linear infinite alternate 0.1s;
 }
 
 #bird1 {
@@ -172,6 +205,7 @@ form p {
 
 #blue-tree {
   animation: blue-tree 2s ease infinite alternate;
+  transform-box: fill-box;
 }
 
 #vector_18,
@@ -180,9 +214,13 @@ form p {
   animation: trees 3s ease infinite alternate 2s;
 }
 
-.outro {
-  text-align: center;
-  margin-top: 5rem;
+#trees {
+  animation: secondary-trees 2s ease-in infinite alternate;
+}
+
+#arm {
+  animation: coffee 5s linear infinite alternate;
+  transform-box: fill-box;
 }
 
 @keyframes flowers {
@@ -250,10 +288,10 @@ form p {
 
 @keyframes blue-tree {
   from {
-    transform: translate(0%, 0%);
+    transform: rotateZ(0deg);
   }
   to {
-    transform: translate(0.3%, 0.2%);
+    transform: rotateZ(5deg);
   }
 }
 
@@ -263,6 +301,24 @@ form p {
   }
   to {
     transform: translate(0.2%, 0.05%);
+  }
+}
+
+@keyframes secondary-trees {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+@keyframes coffee {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-25deg);
   }
 }
 /*# sourceMappingURL=style.css.map */

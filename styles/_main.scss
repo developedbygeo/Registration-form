@@ -89,3 +89,11 @@ form {
 .field {
   @include flex(center, center, column);
 }
+.invalid {
+  border: 1px solid #d93030;
+}
+.invalid-p {
+  color: #d93030;
+  text-decoration: underline;
+  font-weight: 400;
+}

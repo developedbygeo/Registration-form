@@ -1,19 +1,41 @@
 .logo-redir {
   @include flex(center, center, column);
   margin-bottom: 5rem;
+  h1,
+  p {
+    margin-top: 2rem;
+  }
 }
 .main-image {
   height: 80vh;
   text-align: center;
+  width: 100vw;
   svg {
     height: 80vh;
+    width: 100vw;
+    background: transparent;
+  }
+  g {
+    height: 80vh;
+    width: 100vw;
   }
 }
+.outro {
+  text-align: center;
+  color: $honeydew;
+  a {
+    text-decoration: underline;
+    color: $honeydew;
+  }
+}
+
+// Animations
+
 #flowers {
   animation: flowers 5s ease infinite alternate;
 }
 #grass {
-  animation: grass 3s ease-in infinite alternate 0.5s;
+  animation: grass 3s linear infinite alternate 0.1s;
 }
 #bird1 {
   animation: bird1 10s ease infinite alternate;
@@ -26,16 +48,19 @@
 }
 #blue-tree {
   animation: blue-tree 2s ease infinite alternate;
+  transform-box: fill-box;
 }
 #vector_18,
 #vector_19,
 #vector_20 {
   animation: trees 3s ease infinite alternate 2s;
 }
-
-.outro {
-  text-align: center;
-  margin-top: 5rem;
+#trees {
+  animation: secondary-trees 2s ease-in infinite alternate;
+}
+#arm {
+  animation: coffee 5s linear infinite alternate;
+  transform-box: fill-box;
 }
 
 @keyframes flowers {
@@ -98,10 +123,12 @@
 }
 @keyframes blue-tree {
   from {
-    transform: translate(0%, 0%);
+    // transform: translate(0%, 0%);
+    transform: rotateZ(0deg);
   }
   to {
-    transform: translate(0.3%, 0.2%);
+    // transform: translate(0.3%, 0.2%);
+    transform: rotateZ(5deg);
   }
 }
 @keyframes trees {
@@ -110,5 +137,21 @@
   }
   to {
     transform: translate(0.2%, 0.05%);
+  }
+}
+@keyframes secondary-trees {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+@keyframes coffee {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-25deg);
   }
 }
