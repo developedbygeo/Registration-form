@@ -89,11 +89,3 @@ form {
 .field {
   @include flex(center, center, column);
 }
-.square {
-  border: 1px solid rgba($color: #ffffff, $alpha: 0.1);
-  border-right: 1px solid rgba($color: #ffffff, $alpha: 0.2);
-  border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.2);
-  box-shadow: 0 0.5rem 1rem rgba($color: #ffffff, $alpha: 0.05);
-  width: 10rem;
-  height: 10rem;
-}

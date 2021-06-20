@@ -133,12 +133,136 @@ form p {
   flex-direction: column;
 }
 
-.square {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.05);
-  width: 10rem;
-  height: 10rem;
+.logo-redir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.main-image {
+  height: 80vh;
+  text-align: center;
+}
+
+.main-image svg {
+  height: 80vh;
+}
+
+#flowers {
+  animation: flowers 5s ease infinite alternate;
+}
+
+#grass {
+  animation: grass 3s ease-in infinite alternate 0.5s;
+}
+
+#bird1 {
+  animation: bird1 10s ease infinite alternate;
+}
+
+#bird2 {
+  animation: bird2 7s ease infinite alternate;
+}
+
+#bird3 {
+  animation: bird3 8s ease infinite alternate;
+}
+
+#blue-tree {
+  animation: blue-tree 2s ease infinite alternate;
+}
+
+#vector_18,
+#vector_19,
+#vector_20 {
+  animation: trees 3s ease infinite alternate 2s;
+}
+
+.outro {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+@keyframes flowers {
+  from {
+    transform: translateX(-2%);
+  }
+  to {
+    transform: translateX(2%);
+  }
+}
+
+@keyframes grass {
+  from {
+    transform: translateX(1%);
+  }
+  to {
+    transform: translateX(-1%);
+  }
+}
+
+@keyframes birds {
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 0.5;
+    transform: translateX(3%);
+    transform: translateY(-4%);
+  }
+}
+
+@keyframes bird1 {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 0.1;
+    transform: translateY(-10%);
+  }
+}
+
+@keyframes bird2 {
+  from {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+  to {
+    opacity: 0.25;
+    transform: translate(-10%, -8%);
+  }
+}
+
+@keyframes bird3 {
+  from {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+  to {
+    opacity: 0;
+    transform: translate(15%, -10%);
+  }
+}
+
+@keyframes blue-tree {
+  from {
+    transform: translate(0%, 0%);
+  }
+  to {
+    transform: translate(0.3%, 0.2%);
+  }
+}
+
+@keyframes trees {
+  from {
+    transform: translate(0%, 0%);
+  }
+  to {
+    transform: translate(0.2%, 0.05%);
+  }
 }
 /*# sourceMappingURL=style.css.map */
