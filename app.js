@@ -10,7 +10,10 @@ const submitBtn = document.querySelector(".submit");
 
 const requirements = {
   username: /^\w{5,16}$/,
+  email: /^([\w\.\-]+)@([\w\d\-]+)\.([a-z]+)(\.[a-z]+)?$/i,
+  password: /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/,
   contact: /^\d{11}$/,
+  handle: /^([a-z\d]){5,18}$/,
 };
 
 function checkFields(input, regex) {
