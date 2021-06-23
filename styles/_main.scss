@@ -2,6 +2,7 @@ body {
   background: #a8c0ff; /* fallback */
   background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
   background: linear-gradient(to right, #3f2b96, #a8c0ff);
+  overflow-y: hidden;
 }
 
 .logo {
@@ -96,4 +97,13 @@ form {
   color: #d93030;
   text-decoration: underline;
   font-weight: 400;
+}
+
+@keyframes buttonAnimation {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
 }
