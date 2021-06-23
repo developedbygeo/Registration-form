@@ -5,7 +5,7 @@ const passwordField = document.querySelector("#password");
 const contactnumberField = document.querySelector("#contact-number");
 const handleField = document.querySelector("#handle");
 const fields = document.querySelectorAll("input");
-// Button
+const registrationForm = document.querySelector("form");
 const submitBtn = document.querySelector(".submit");
 
 const requirements = {
@@ -26,12 +26,19 @@ function checkFields(input, regex) {
     input.classList.remove("invalid");
     input.nextElementSibling.classList.remove("invalid-p");
   }
-  console.log(regex.test(input.value));
 }
-
 fields.forEach((input) => {
   input.addEventListener("keyup", (e) => {
-    // console.log(e.target.name);
     checkFields(e.target, requirements[e.target.name]);
+  });
+});
+
+submitBtn.addEventListener("click", (e) => {
+  fields.forEach((field) => {
+    if (requirements[field.name].test(field.value) === false) {
+      e.preventDefault();
+      field.nextElementSibling.classList.add("invalid-p");
+      return false;
+    }
   });
 });
