@@ -448,6 +448,10 @@ form p {
   }
   form {
     margin: 3%;
+    height: 90vh;
+  }
+  .wrapper {
+    height: 85%;
   }
   .submit {
     bottom: 1%;
