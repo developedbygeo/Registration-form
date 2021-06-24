@@ -41,6 +41,13 @@
   .submit:focus {
     animation: buttonAnimation 150ms ease-in alternate;
   }
+  .logo-redir {
+    text-align: center;
+    height: 10vh;
+  }
+  .main-image {
+    height: 70vh;
+  }
 }
 @media screen and (max-width: 319px) {
   html {
