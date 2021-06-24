@@ -34,11 +34,18 @@ fields.forEach((input) => {
 });
 
 submitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  let pass = 0;
   fields.forEach((field) => {
     if (requirements[field.name].test(field.value) === false) {
-      e.preventDefault();
       field.nextElementSibling.classList.add("invalid-p");
       return false;
+    } else {
+      e.preventDefault();
+      pass += 1;
     }
   });
+  if (pass == 5) {
+    window.location.href = "./redirect/";
+  }
 });
